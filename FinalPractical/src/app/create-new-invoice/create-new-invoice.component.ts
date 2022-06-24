@@ -14,47 +14,41 @@ export class CreateNewInvoiceComponent implements OnInit {
   date = null;
   i = 0;
   editId: string | null = null;
-  listOfData: any[] = [];
-
-  lineItemForm:any = this.fb.group({
-    lineItemFormArray: this.fb.array([])
-  })
-
-
-  get itemArr() {
-    return this.lineItemForm.controls['itemArr'] as FormArray;
-  }
+  listOfLineItemData: any[] = [];
 
   onDateChange(receivedDate:Date){
-    console.log(receivedDate)
+    console.log(receivedDate);
   }
 
+  //For submitting form
   submitForm(){
 
   }
 
-
+//To start editing of table cell
   startEdit(id: string): void {
     this.editId = id;
   }
 
+  //To stop editing of table cell
   stopEdit(): void {
     this.editId = null;
   }
 
+  //For adding table row
   addRow(): void {
     if(this.i < 10){
-      this.listOfData = [
-        ...this.listOfData,
+      this.listOfLineItemData = [
+        ...this.listOfLineItemData,
         {
           id: this.i,
-          Description: ``,
-          Quantity: '',
-          UnitPrice: ``,
-          Discount: ``,
-          Account:``,
-          TaxRateId:``,
-          TotalAmount:``
+          Description: `saddsa`,
+          Quantity: '25',
+          UnitPrice: `10`,
+          Discount: `10`,
+          Account:`Sales`,
+          TaxRateId:`200-Account`,
+          TotalAmount:`500`
         }
       ];
       this.i++;
@@ -66,12 +60,15 @@ export class CreateNewInvoiceComponent implements OnInit {
 
   }
 
+
+  //For deleting table row
   deleteRow(id: string): void {
-    this.listOfData = this.listOfData.filter((d:any) => d.id !== id);
+    this.listOfLineItemData = this.listOfLineItemData.filter((d:any) => d.id !== id);
   }
 
+  //Cancel button
   cancel(){
-
+    alert("Cancel Clicked")
   }
 
   constructor(private fb: FormBuilder, private message: NzMessageService) { }

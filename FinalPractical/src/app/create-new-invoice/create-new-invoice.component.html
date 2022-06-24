@@ -74,7 +74,7 @@
           </div>
         </div>
       </form>
-      <nz-table #editRowTable nzBordered [nzData]="listOfData">
+      <nz-table #editRowTable nzBordered [nzData]="listOfLineItemData">
         <thead>
           <tr>
             <th nzWidth="30%" class="no-border-right custom-header-color">v</th>
@@ -132,9 +132,9 @@
               </td>
               <td>
                 <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
-                  {{ data.address }}
+                  {{ data.TotalAmount }}
                 </div>
-                <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.address"
+                <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.TotalAmount"
                   (blur)="stopEdit()" />
               </td>
               <td class="w-30">

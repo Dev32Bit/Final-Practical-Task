@@ -175,6 +175,7 @@ export class ListingScreenComponent implements OnInit {
     console.log(range)
   }
 
+  //For getting tab index
   getTabIndex(value:any){
     this.currentTabIndex = value;
   }
