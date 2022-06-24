@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListingScreenComponent implements OnInit {
 
-  // result:any = [
-  //   {first: 'All', head: [{head: 'All'}, {head: 'All'}, {head: 'All'}, {head: 'All'}, {head: 'All'}, {head: 'All'}, {head: 'All'}, {head: 'All'}],  body: [{head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'bodi1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}]},
-  //   {first: 'Draft' , head: [{head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}, {head: 'Draft'}], body: [{head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'bodi1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}]},
-  //   {first: 'Awaiting Payment', head: [{head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}, {head: 'Awaiting Payment'}], body: [{head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'bodi1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}]},
-  //   {first: 'Paid', head: [{head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}, {head: 'Paid'}], body: [{head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'bodi1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}, {head: 'body1'}]}
-  //   ];
+
   listOfCurrentPageData: readonly any[] = [];
   setOfCheckedId = new Set<number>();
   checked = false;
