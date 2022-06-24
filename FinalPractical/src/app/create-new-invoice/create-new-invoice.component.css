@@ -1,0 +1,84 @@
+
+nz-content {
+  background-color: rgba(248,248,248,255);
+}
+
+.inner-content {
+  background: rgba(248,248,248,255);
+  padding: 24px;
+  min-height: 650px;
+  padding: 20px 50px;
+}
+
+.editable-cell {
+  position: relative;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-cell:hover{
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.w-100{
+  width: 100px;
+}
+
+.w-50{
+  width: 50px;
+}
+
+.w-80{
+  width: 80px;
+}
+
+.w-30{
+  width: 30px;
+}
+
+.custom-border{
+  border-left: 1px solid black;
+}
+
+.no-border-right{
+  border-right: none !important;
+}
+
+.no-border-left{
+  border-left: none !important;
+}
+
+.add-lineitem-button{
+  background-color: rgba(234,237,239,255);
+  border-color: lightgray;
+  color: #1f97c5;
+  font-weight: 600;
+}
+
+.no-border{
+  border: none !important;
+}
+.custom-header-color{
+  color: grey;
+}
+
+
+.no-border-top{
+  border-top: none !important;
+}
+
+.custom-margin{
+  margin-right: 150px !important;
+}
+
+.cancel-button{
+  background-color: gray;
+  border-color: gray;
+  color: white;
+}
+
+.save-area{
+  margin-top: 50px;
+}

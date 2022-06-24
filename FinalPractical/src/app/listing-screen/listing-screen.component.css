@@ -1,0 +1,56 @@
+
+
+nz-content {
+  background-color: rgba(248,248,248,255);
+}
+
+nz-footer {
+  text-align: center;
+}
+
+.inner-content {
+  background: rgba(248,248,248,255);
+  padding: 24px;
+  min-height: 650px;
+  padding: 20px 50px;
+}
+
+.page-title{
+  font-size: large;
+  font-weight: bold;
+  color: grey;
+}
+
+.create-invoice-button{
+  background-color: rgba(234,237,239,255);
+  border-color: lightgray;
+  color: #1f97c5;
+  font-weight: 600;
+}
+
+.disabledButton{
+  color: grey;
+}
+
+.utility-functions{
+  margin-top: 80px;
+}
+.table-area{
+  margin-top: 10px;
+}
+
+.hideButtons{
+  display: none;
+}
+
+.displayButton{
+  display:inline;
+}
+
+.custom-margin{
+  margin-right: 5px;
+}
+
+.daterange-button-margin{
+  margin-left: 15px;
+}

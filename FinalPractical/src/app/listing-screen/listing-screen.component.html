@@ -1,0 +1,67 @@
+<nz-layout>
+  <nz-content>
+    <div class="inner-content">
+      <p class="page-title">Invoices</p>
+      <button nz-button nzType="primary" class="create-invoice-button" [routerLink]="['/createNewInvoice']">Create Invoice</button>
+
+      <div class="utility-functions">
+
+
+        <div class="table-area">
+          <nz-tabset nzType="card"  (nzSelectedIndexChange)="getTabIndex($event)">
+            <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab.tabName + '(' + tab.data.length + ')' " style="color: black">
+              <nz-table #rowSelectionTable nzShowSizeChanger [nzData]="tabs"
+                (nzCurrentPageDataChange)="onCurrentPageDataChange($event)" [nzTitle]="tableHeader">
+                <ng-template #tableHeader class="inner-content">
+                  <div nz-row>
+                    <div nz-col nzSpan="8">
+                      <button nz-button nzType="primary" class="create-invoice-button custom-margin" [disabled]="disableUtilityButtons" [ngClass]="disableUtilityButtons ? 'disabledButton':''" >Awaiting Payments</button>
+                      <button nz-button nzType="primary" class="create-invoice-button custom-margin" [disabled]="disableUtilityButtons" [ngClass]="disableUtilityButtons ? 'disabledButton':''">Delete</button>
+                      <button nz-button nzType="primary" class="create-invoice-button custom-margin" [disabled]="disableUtilityButtons" [ngClass]="disableUtilityButtons ? 'disabledButton':''">Print</button>
+                      <button nz-button nzType="primary" class="create-invoice-button custom-margin" [disabled]="disableUtilityButtons" [ngClass]="disableUtilityButtons ? 'disabledButton':''">Email</button>
+                    </div>
+                    <div nz-col nzSpan="4" nzOffset="18" style="margin-left: 550px">
+                        <span>{{setOfCheckedId.size}} Items | 120 GBP</span>
+                        <button nz-button nz-dropdown [nzDropdownMenu]="menu4" class="create-invoice-button daterange-button-margin">
+                          Search
+                        </button>
+                    </div>
+                    <nz-dropdown-menu #menu4="nzDropdownMenu">
+                      <nz-range-picker [(ngModel)]="dateRange" (ngModelChange)="onSelectedDateRange($event)"></nz-range-picker>
+                    </nz-dropdown-menu>
+                  </div>
+              </ng-template>
+                <thead>
+                  <tr>
+                    <th [(nzChecked)]="checked" [nzIndeterminate]="indeterminate"
+                      (nzCheckedChange)="onAllChecked($event)"></th>
+                    <th>Number</th>
+                    <th>Ref</th>
+                    <th>To</th>
+                    <th>Date</th>
+                    <th>Due Date</th>
+                    <th>Due</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of tab.data">
+                    <td [nzChecked]="setOfCheckedId.has(data.key)" (nzCheckedChange)="onItemChecked(data.key, $event)">
+                    </td>
+                    <td>{{ data.number }}</td>
+                    <td>{{ data.ref }}</td>
+                    <td>{{ data.to }}</td>
+                    <td>{{ data.date }}</td>
+                    <td>{{ data.dueDate }}</td>
+                    <td>{{ data.due }}</td>
+                  </tr>
+                </tbody>
+              </nz-table>
+            </nz-tab>
+
+          </nz-tabset>
+        </div>
+      </div>
+    </div>
+
+  </nz-content>
+</nz-layout>

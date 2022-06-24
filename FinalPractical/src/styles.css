@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: black !important;
+}
+.ant-tabs-tab-btn{
+  color: #1f97c5;
+}
+.ant-table table{
+  border-collapse: collapse !important;
+}
